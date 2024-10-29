@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-image: url(./Images/Background.jpg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  padding: 10px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.todo-list {
+  position: relative;
+  background-color: #fff;
+  width: 600px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 40px #973ec9;
+}
+
+.todo-list .title {
+  display: flex;
+  align-items: center;
+}
+
+.todo-list .title h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.todo-list .title img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.todo-list .form {
+  margin-top: 20px;
+}
+
+.todo-list .form input {
+  border-radius: 40px;
+  border: none;
+  background-color: #eee;
+  padding: 14px 30px;
+  width: 89%;
+  font-size: 18px;
+}
+
+.todo-list .form input:focus {
+  outline: 3px solid #973ec9;
+}
+
+.todo-list .form .btn {
+  border: none;
+  background-color: #973ec9;
+  padding: 16px 30px;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 18px;
+  margin-left: -40px;
+  cursor: pointer;
+}
+
+.todo-list .tasks-container {
+  margin-top: 30px;
+}
+
+.todo-list .tasks-container ul {
+  list-style: none;
+}
+
+.todo-list .tasks-container ul li {
+  margin-bottom: 20px;
+  padding-left: 50px;
+  font-size: 18px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.todo-list .tasks-container ul li::before {
+  position: absolute;
+  content: "";
+  background: url(./Images/UnChecked.png) center / cover;
+  width: 22px;
+  height: 22px;
+  left: 17px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.todo-list .tasks-container ul li.checked {
+  text-decoration: line-through;
+}
+
+.todo-list .tasks-container ul li.checked::before {
+  content: "";
+  background: url("./Images/icons8-checked-48.png") center / cover;
+}
+
+.todo-list .tasks-container ul li span {
+  position: absolute;
+  right: 30px;
+  font-size: 22px;
+  cursor: pointer;
+}
